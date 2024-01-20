@@ -6,6 +6,7 @@ import { mockBarData as data } from "../data/mockData";
 const BarChart = ({ isDashboard = false }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+  
   return (
     <ResponsiveBar
       data={data}
@@ -36,9 +37,6 @@ const BarChart = ({ isDashboard = false }) => {
             fill: colors.grey[100],
           },
         },
-        tooltip: {
-          backgroundColor: colors.greenAccent[500]
-        }
       }}
       keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
       indexBy="country"
